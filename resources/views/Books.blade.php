@@ -23,7 +23,10 @@
                         @forelse($books as $book)
                                 <tr>
                                     <td>
-                                        <img src="{{ asset('/storage/'.$book->img) }}"><a href="" id="{{$book->id}}" data-toggle="modal" data-target="#changeModal">{{$book->name}}</a>
+                                        @isset($book->img)
+                                        <img src="{{ asset('/storage/'.$book->img) }}">
+                                        @endisset
+                                        <a href="" id="{{$book->id}}" data-toggle="modal" data-target="#changeModal">{{$book->name}}</a>
                                         <script type="text/javascript">
                                             $('document').ready(function () {
                                                 $("#{{$book->id}}").on('click',function () {//при клике по ссылке с ид книги
