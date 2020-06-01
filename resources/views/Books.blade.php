@@ -146,7 +146,7 @@
                         <label>Description:</label>
                         <textarea name="description" ></textarea><br>
                         <label>publication date:</label>
-                        <input name="public_date"><br>
+                        <input name="public_date" type="date"><br>
                         <label>author:</label>
                         <select id="a_author">
 {{--___________________________________________________________________________________________________--}}
